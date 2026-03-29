@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Spot institutionnel UNIPOD",
+    "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "category": "Institutionnel",
+    "createdAt": "2026-03-21T10:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "title": "Temoignage startup - FASEKO",
+    "embedUrl": "https://www.youtube.com/embed/ysz5S6PUM-U",
+    "category": "Temoignage",
+    "createdAt": "2026-03-21T11:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "title": "Aftermovie - Demo Day 2026",
+    "embedUrl": "https://www.youtube.com/embed/jNQXAC9IVRw",
+    "category": "Evenement",
+    "createdAt": "2026-03-21T12:00:00.000Z"
+  }
+]

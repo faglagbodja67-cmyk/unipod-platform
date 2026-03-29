@@ -1,0 +1,807 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIPOD - Hub Entrepreneurial</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header id="accueil">
+    <div class="logo">
+        <img src="Unipod-logo.016fe425.png" alt="Logo UNIPOD">
+        <span>UNIPOD Lomé</span>
+    </div>
+    <button
+        id="menu-toggle"
+        class="menu-toggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="main-nav"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav id="main-nav" class="main-nav">
+        <div class="nav-links">
+            <a href="#accueil">Accueil</a>
+            <div class="dropdown">
+                <a href="#apropos" class="dropdown-toggle">À propos <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="#cadre-pnud">Cadre PNUD</a>
+                    <a href="#odd">ODD</a>
+                    <a href="#kpi">KPI</a>
+                    <a href="#gouvernance">Gouvernance</a>
+                    <a href="#formations">Formations</a>
+                    <a href="#incubation">Incubation</a>
+                    <a href="#evenements">Événements</a>
+                    <a href="#reseautage">Réseautage</a>
+                    <a href="#cafe">Espace Café</a>
+                    <a href="#commande-reservation">Commande & Reservation</a>
+                    <a href="#impact">Impact</a>
+                    <a href="/pub-video">Vidéos</a>
+                    <a href="/bibliotheque">Bibliothèque</a>
+                    <a href="#partenaires">Partenaires</a>
+                    <a href="#mobile-app">Mobile App</a>
+                </div>
+            </div>
+            <a href="#contact">Contact</a>
+        </div>
+        <section class="brand-strip nav-brand-strip" aria-label="Partenaires institutionnels">
+            <p class="nav-brand-title">Université de Lomé | UNIPOD | PNUD</p>
+            <div class="nav-brand-logos">
+                <div class="brand-item university logo-only">
+                    <img src="logo.png" alt="Logo Université de Lomé">
+                </div>
+                <div class="brand-item logo-only">
+                    <img src="Unipod-logo.016fe425.png" alt="Logo UNIPOD">
+                </div>
+                <div class="brand-item pnud logo-only">
+                    <img src="pnud-logo.svg" alt="Logo PNUD">
+                </div>
+            </div>
+        </section>
+        <div class="nav-cta">
+            <a class="cta-link primary" href="/inscription?domain=autre&source=index">Inscription</a>
+            <a class="cta-link secondary" href="/admin-login">Admin</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Accélérer les entrepreneurs qui transforment l'Afrique</h1>
+    <p>UNIPOD accompagne les porteurs de projets avec des parcours professionnalisants, une incubation structurée et un écosystème aligné sur les standards internationaux de développement.</p>
+    <div class="hero-actions">
+        <button onclick="openRegistrationForm('Candidature generale', 'autre', 'hero')">Postuler maintenant</button>
+        <a class="secondary-btn" href="/pub-video">Voir les vidéos</a>
+    </div>
+</section>
+
+<section id="cadre-pnud" class="pnud-framework">
+    <h2>Cadre Stratégique Aligné PNUD</h2>
+    <p class="section-desc">Nos interventions sont structurées selon une approche internationale orientée impact, inclusion et durabilité.</p>
+    <div class="pnud-grid">
+        <article class="pnud-card" data-axis="inclusion">
+            <h3>Inclusion économique</h3>
+            <p>Accès des jeunes et femmes aux compétences entrepreneuriales, au mentorat et aux opportunités de revenus durables.</p>
+            <button type="button" class="pnud-connect" aria-label="Voir les actions Inclusion économique">
+                <i class="fa-solid fa-link"></i>
+                <span>Connexion</span>
+            </button>
+        </article>
+        <article class="pnud-card" data-axis="innovation">
+            <h3>Innovation & transformation digitale</h3>
+            <p>Utilisation du numérique pour renforcer la compétitivité, la visibilité et la scalabilité des projets accompagnés.</p>
+            <button type="button" class="pnud-connect" aria-label="Voir les actions Innovation et transformation digitale">
+                <i class="fa-solid fa-link"></i>
+                <span>Connexion</span>
+            </button>
+        </article>
+        <article class="pnud-card" data-axis="gouvernance">
+            <h3>Gouvernance & leadership</h3>
+            <p>Renforcement des capacites de gestion, de pilotage financier et de gouvernance des structures entrepreneuriales.</p>
+            <button type="button" class="pnud-connect" aria-label="Voir les actions Gouvernance et leadership">
+                <i class="fa-solid fa-link"></i>
+                <span>Connexion</span>
+            </button>
+        </article>
+        <article class="pnud-card" data-axis="partenariats">
+            <h3>Partenariats multi-acteurs</h3>
+            <p>Cooperation entre universite, institutions, secteur prive, incubateurs et partenaires techniques et financiers.</p>
+            <button type="button" class="pnud-connect" aria-label="Voir les actions Partenariats multi-acteurs">
+                <i class="fa-solid fa-link"></i>
+                <span>Connexion</span>
+            </button>
+        </article>
+    </div>
+    <div id="pnud-actions" class="pnud-actions is-hidden" aria-live="polite">
+        <h3 id="pnud-actions-title"></h3>
+        <ul id="pnud-actions-list"></ul>
+    </div>
+</section>
+
+<section id="odd" class="odd-section">
+    <h2>Contribution aux Objectifs de Développement Durable</h2>
+    <div id="odd-chips" class="odd-chips" role="tablist" aria-label="Objectifs de Développement Durable">
+        <button type="button" class="odd-chip" data-odd="odd4">ODD 4 - Éducation de qualité</button>
+        <button type="button" class="odd-chip" data-odd="odd5">ODD 5 - Egalite des genres</button>
+        <button type="button" class="odd-chip" data-odd="odd8">ODD 8 - Travail décent et croissance économique</button>
+        <button type="button" class="odd-chip" data-odd="odd9">ODD 9 - Innovation et industrialisation durable</button>
+        <button type="button" class="odd-chip" data-odd="odd17">ODD 17 - Partenariats pour les objectifs</button>
+    </div>
+    <div id="odd-actions" class="odd-actions is-hidden" aria-live="polite">
+        <h3 id="odd-actions-title"></h3>
+        <ul id="odd-actions-list"></ul>
+    </div>
+</section>
+
+<section id="kpi" class="kpi-section">
+    <h2>Tableau KPI - Suivi Trimestriel</h2>
+    <p class="section-desc">Pilotage de la performance selon des indicateurs mesurables et alignés aux objectifs de programme.</p>
+    <div class="kpi-grid">
+        <article class="kpi-card" data-kpi="entrepreneurs">
+            <h3>Entrepreneurs formés</h3>
+            <p class="kpi-value">+250</p>
+            <div class="kpi-bar"><span style="width: 83%;"></span></div>
+            <small>Objectif annuel: 300</small>
+        </article>
+        <article class="kpi-card" data-kpi="incubation">
+            <h3>Startups incubées</h3>
+            <p class="kpi-value">35</p>
+            <div class="kpi-bar"><span style="width: 70%;"></span></div>
+            <small>Objectif annuel: 50</small>
+        </article>
+        <article class="kpi-card" data-kpi="femmes">
+            <h3>Taux de participation féminine</h3>
+            <p class="kpi-value">46%</p>
+            <div class="kpi-bar"><span style="width: 92%;"></span></div>
+            <small>Objectif annuel: 50%</small>
+        </article>
+        <article class="kpi-card" data-kpi="partenaires">
+            <h3>Partenaires actifs</h3>
+            <p class="kpi-value">15</p>
+            <div class="kpi-bar"><span style="width: 75%;"></span></div>
+            <small>Objectif annuel: 20</small>
+        </article>
+    </div>
+    <div id="kpi-actions" class="kpi-actions" aria-live="polite">
+        <h3 id="kpi-actions-title"></h3>
+        <ul id="kpi-actions-list"></ul>
+    </div>
+</section>
+
+<section id="gouvernance" class="governance-section">
+    <h2>Gouvernance et Rapports</h2>
+    <p class="section-desc">Transparence programmatique, redevabilité et suivi institutionnel selon les bonnes pratiques internationales.</p>
+    <div class="governance-grid">
+        <article>
+            <h3>Rapport d'activité</h3>
+            <p>Résultats, activités majeures, profils bénéficiaires et leçons apprises.</p>
+            <a href="/inscription?domain=autre&activity=Demande%20rapport%20activite&source=gouvernance">Demander le rapport</a>
+        </article>
+        <article>
+            <h3>Rapport financier synthèse</h3>
+            <p>Vue d'ensemble des ressources mobilisées, dépenses et catégories de financement.</p>
+            <a href="/inscription?domain=autre&activity=Demande%20rapport%20financier&source=gouvernance">Accéder à la synthèse</a>
+        </article>
+        <article>
+            <h3>Suivi Evaluation</h3>
+            <p>Cadre de mesure d'impact, indicateurs de performance et mécanismes de qualité.</p>
+            <a href="/inscription?domain=autre&activity=Demande%20cadre%20suivi-evaluation&source=gouvernance">Consulter le cadre</a>
+        </article>
+    </div>
+</section>
+
+<section id="impact" class="impact">
+    <h2>Resultats UNIPOD</h2>
+    <div class="impact-grid">
+        <article>
+            <h3>250+</h3>
+            <p>Jeunes entrepreneurs accompagnés</p>
+            <ul class="impact-list">
+                <li>
+                    <details>
+                        <summary>Etudiants porteurs de projets</summary>
+                        <ul class="impact-sublist">
+                            <li>Idées de startups en phase de conception</li>
+                            <li>Projets académiques transformés en solutions marché</li>
+                            <li>Coaching sur business model et validation client</li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Jeunes diplômés en création d'entreprise</summary>
+                        <ul class="impact-sublist">
+                            <li>Accompagnement de l'idee au lancement</li>
+                            <li>Mentorat sur gestion, vente et communication</li>
+                            <li>Orientation vers financement et incubation</li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Promoteurs de TPE/PME locales</summary>
+                        <ul class="impact-sublist">
+                            <li>Structuration administrative et juridique</li>
+                            <li>Digitalisation des operations commerciales</li>
+                            <li>Strategies de croissance locale et regionale</li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h3>80+</h3>
+            <p>Ateliers, bootcamps et masterclass</p>
+            <ul class="impact-list">
+                <li>
+                    <details>
+                        <summary>Bootcamps de validation d'idee</summary>
+                        <ul class="impact-sublist">
+                            <li>Design thinking et problem-solution fit</li>
+                            <li>Entretiens utilisateurs et tests terrain</li>
+                            <li>Prototype minimum viable en cycle court</li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Masterclass marketing digital</summary>
+                        <ul class="impact-sublist">
+                            <li>SEO, réseaux sociaux et acquisition client</li>
+                            <li>Branding et positionnement de marque</li>
+                            <li>Campagnes publicitaires performantes</li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Ateliers finances et levee de fonds</summary>
+                        <ul class="impact-sublist">
+                            <li>Lecture des indicateurs financiers</li>
+                            <li>Preparation du pitch investisseur</li>
+                            <li>Negotiation et structuration de deals</li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h3>35</h3>
+            <p>Startups suivies en incubation</p>
+            <ul class="impact-list">
+                <li>
+                    <details>
+                        <summary>Startups AgriTech</summary>
+                        <ul class="impact-sublist">
+                            <li>Solutions de productivite agricole</li>
+                            <li>Plateformes de distribution et marché</li>
+                            <li>Technologies de suivi des cultures</li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Startups EduTech et HealthTech</summary>
+                        <ul class="impact-sublist">
+                            <li>Applications educatives et e-learning</li>
+                            <li>Solutions digitales de sante preventive</li>
+                            <li>Accompagnement reglementaire et partenariats</li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Startups e-commerce et services</summary>
+                        <ul class="impact-sublist">
+                            <li>Structuration logistique et paiement</li>
+                            <li>Optimisation du tunnel de conversion</li>
+                            <li>Strategies de fidelisation client</li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h3>15</h3>
+            <p>Partenaires institutionnels et prives</p>
+            <ul class="impact-list">
+                <li>
+                    <details>
+                        <summary>Université de Lomé et structures publiques</summary>
+                        <ul class="impact-sublist">
+                            <li>Co-certification des programmes</li>
+                            <li>Mobilisation des experts académiques</li>
+                            <li>Mise a disposition d'infrastructures</li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>Banques et institutions de financement</summary>
+                        <ul class="impact-sublist">
+                            <li>Produits financiers dedies startups</li>
+                            <li>Education financiere et credit management</li>
+                            <li>Co-financement d'appels a projets</li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>ONG, incubateurs et investisseurs</summary>
+                        <ul class="impact-sublist">
+                            <li>Programmes d'impact social et inclusion</li>
+                            <li>Co-incubation et mentorat specialise</li>
+                            <li>Accès à des réseaux d'investissement</li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+<section id="formations">
+    <h2>Nos Formations</h2>
+    <div class="cards" id="formations-list"></div>
+</section>
+
+<section id="incubation" class="support-section finance">
+    <h2>Incubation</h2>
+    <div class="cards">
+        <article class="card">
+            <h3>Pre-incubation</h3>
+            <p>Validation d'idée, étude de marché et premier prototype en 8 semaines.</p>
+            <button onclick="openRegistrationForm('Programme pre-incubation', 'formations', 'incubation')">Integrer</button>
+        </article>
+        <article class="card">
+            <h3>Incubation startup</h3>
+            <p>Accompagnement business, juridique et technique avec mentors dedies.</p>
+            <button onclick="openRegistrationForm('Programme incubation startup', 'autre', 'incubation')">Candidater</button>
+        </article>
+        <article class="card">
+            <h3>Acceleration</h3>
+            <p>Croissance, levée de fonds et passage à l'échelle pour startups matures.</p>
+            <button onclick="openRegistrationForm('Programme acceleration', 'events', 'incubation')">Rejoindre</button>
+        </article>
+    </div>
+</section>
+
+<section id="evenements">
+    <h2>Événements & Ateliers</h2>
+    <div class="cards" id="events-list"></div>
+</section>
+
+<section id="reseautage">
+    <h2>Réseautage</h2>
+    <div class="cards" id="network-list"></div>
+</section>
+
+<section id="cafe" class="cafe-section">
+    <h2>Espace Café UNIPOD</h2>
+    <p class="section-desc">
+        Un lieu dynamique à Lomé où entrepreneurs, étudiants et mentors se rencontrent,
+        échangent des idées, collaborent et créent des opportunités.
+    </p>
+
+    <div class="cards" id="cafe-list"></div>
+
+    <div class="cafe-actions">
+        <button onclick="voirMenuCafe()">Voir le menu</button>
+        <button onclick="reserverPlace()">Réserver une place</button>
+        <button onclick="rejoindreCafe()">Rejoindre maintenant</button>
+    </div>
+</section>
+
+<section id="menu-semaine" class="menu-section cafe-panel is-hidden">
+    <div class="menu-head">
+        <h2>Menu Hebdomadaire - Espace Café</h2>
+        <p>Selection culinaire de la semaine</p>
+    </div>
+
+    <div id="menu-grid" class="menu-grid">
+        <article class="menu-card">
+            <h3>Lundi</h3>
+            <div class="menu-items">
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" alt="Pinon au poisson">
+                    <div>
+                        <h4>Pinon au poisson</h4>
+                        <p class="menu-price">A partir de 1 500 FCFA</p>
+                    </div>
+                </article>
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=500&q=80" alt="Riz curie et viande de boeuf">
+                    <div>
+                        <h4>Riz curie + viande de boeuf</h4>
+                        <p class="menu-price">A partir de 2 000 FCFA</p>
+                    </div>
+                </article>
+            </div>
+        </article>
+
+        <article class="menu-card">
+            <h3>Mardi</h3>
+            <div class="menu-items">
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=500&q=80" alt="Riz banc sauce de mouton">
+                    <div>
+                        <h4>Riz banc + sauce de mouton</h4>
+                        <p class="menu-price">A partir de 2 500 FCFA</p>
+                    </div>
+                </article>
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=500&q=80" alt="Patte de mais gboma">
+                    <div>
+                        <h4>Patte de mais + Gboma</h4>
+                        <p class="menu-price">A partir de 1 500 FCFA</p>
+                    </div>
+                </article>
+            </div>
+        </article>
+
+        <article class="menu-card">
+            <h3>Mercredi</h3>
+            <div class="menu-items">
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=500&q=80" alt="Petit pois viande et saucisse">
+                    <div>
+                        <h4>Petit poids a la viande + saucisse</h4>
+                        <p class="menu-price">A partir de 2 000 FCFA</p>
+                    </div>
+                </article>
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=500&q=80" alt="Couscous au gras et poulet">
+                    <div>
+                        <h4>Couscous au gras + poulets</h4>
+                        <p class="menu-price">A partir de 2 500 FCFA</p>
+                    </div>
+                </article>
+            </div>
+        </article>
+
+        <article class="menu-card">
+            <h3>Jeudi</h3>
+            <div class="menu-items">
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=500&q=80" alt="Frites au poulet">
+                    <div>
+                        <h4>Frites au poulet</h4>
+                        <p class="menu-price">A partir de 2 000 FCFA</p>
+                    </div>
+                </article>
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=500&q=80" alt="Spaghetti a la boulette de viande">
+                    <div>
+                        <h4>Spaghetti a la boulette de viande</h4>
+                        <p class="menu-price">A partir de 2 500 FCFA</p>
+                    </div>
+                </article>
+            </div>
+        </article>
+
+        <article class="menu-card">
+            <h3>Vendredi</h3>
+            <div class="menu-items">
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80" alt="Riz au gras poulet braise">
+                    <div>
+                        <h4>Riz au gras + poulet braise</h4>
+                        <p class="menu-price">A partir de 2 500 FCFA</p>
+                    </div>
+                </article>
+                <article class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80" alt="Pate rouge poisson">
+                    <div>
+                        <h4>Pate rouge + poisson</h4>
+                        <p class="menu-price">A partir de 2 000 FCFA</p>
+                    </div>
+                </article>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section id="commande-reservation" class="order-section cafe-panel is-hidden">
+    <h2>Commande et Réservation</h2>
+    <p class="section-desc">Passez votre commande de repas ou réservez votre place à l'Espace Café en quelques clics.</p>
+
+    <div class="order-grid">
+        <article class="order-card">
+            <h3>Formulaire de commande</h3>
+            <form id="commande-form" class="mini-form" novalidate>
+                <input id="cmd-fullname" type="text" placeholder="Nom complet" required>
+                <input id="cmd-email" type="email" placeholder="Email" required>
+                <input id="cmd-phone" type="tel" placeholder="Téléphone">
+
+                <select id="cmd-day" required>
+                    <option value="">Jour</option>
+                </select>
+
+                <select id="cmd-item" required>
+                    <option value="">Menu</option>
+                </select>
+
+                <input id="cmd-qty" type="number" min="1" max="20" value="1" required>
+                <textarea id="cmd-note" rows="3" placeholder="Instructions (optionnel)"></textarea>
+
+                <fieldset class="payment-box">
+                    <legend>Paiement</legend>
+                    <p class="payment-help">Selectionnez un moyen de paiement: Mixx by Yas, Flooz ou paiement sur place.</p>
+                    <select id="cmd-payment-method" required>
+                        <option value="">Moyen de paiement</option>
+                        <option value="mixx">Mobile Money Mixx by Yas</option>
+                        <option value="flooz">Mobile Money Flooz</option>
+                        <option value="ussd">USSD</option>
+                        <option value="sur_place">Paiement sur place</option>
+                    </select>
+                    <select id="cmd-payment-status" required>
+                        <option value="">Statut paiement</option>
+                        <option value="en_attente">En attente</option>
+                        <option value="paye">Paye</option>
+                    </select>
+                    <input id="cmd-payment-number" type="tel" placeholder="Numero mobile money (Mixx/Flooz)">
+                    <input id="cmd-payment-ref" type="text" placeholder="Reference transaction (optionnel)">
+                    <input id="cmd-payment-ussd" type="text" placeholder="Code USSD utilise (optionnel)">
+                    <p id="cmd-ussd-hint" class="payment-ussd-hint is-hidden"></p>
+                    <input id="cmd-amount" type="text" placeholder="Montant total (FCFA)" readonly>
+                    <div class="payment-tags" aria-label="Moyens de paiement disponibles">
+                        <span class="tag mixx">Mixx by Yas</span>
+                        <span class="tag flooz">Flooz</span>
+                        <span class="tag ussd">USSD</span>
+                    </div>
+                </fieldset>
+
+                <label class="mini-consent">
+                    <input id="cmd-consent" type="checkbox" required>
+                    <span>Je confirme ma commande.</span>
+                </label>
+
+                <button type="submit">Envoyer la commande</button>
+                <p id="cmd-status" class="mini-status"></p>
+            </form>
+        </article>
+
+        <article class="order-card">
+            <h3>Formulaire de reservation</h3>
+            <form id="reservation-form" class="mini-form" novalidate>
+                <input id="res-fullname" type="text" placeholder="Nom complet" required>
+                <input id="res-email" type="email" placeholder="Email" required>
+                <input id="res-phone" type="tel" placeholder="Téléphone">
+
+                <select id="res-type" required>
+                    <option value="">Type de reservation</option>
+                    <option value="Table Espace Cafe">Table Espace Café</option>
+                    <option value="Espace coworking">Espace coworking</option>
+                    <option value="Session networking">Session networking</option>
+                </select>
+
+                <input id="res-date" type="date" required>
+                <input id="res-time" type="time" required>
+                <input id="res-places" type="number" min="1" max="20" value="1" required>
+                <textarea id="res-note" rows="3" placeholder="Précisions (optionnel)"></textarea>
+
+                <fieldset class="payment-box">
+                    <legend>Paiement</legend>
+                    <p class="payment-help">Selectionnez un moyen de paiement: Mixx by Yas, Flooz ou paiement sur place.</p>
+                    <select id="res-payment-method" required>
+                        <option value="">Moyen de paiement</option>
+                        <option value="mixx">Mobile Money Mixx by Yas</option>
+                        <option value="flooz">Mobile Money Flooz</option>
+                        <option value="ussd">USSD</option>
+                        <option value="sur_place">Paiement sur place</option>
+                    </select>
+                    <select id="res-payment-status" required>
+                        <option value="">Statut paiement</option>
+                        <option value="en_attente">En attente</option>
+                        <option value="paye">Paye</option>
+                    </select>
+                    <input id="res-payment-number" type="tel" placeholder="Numero mobile money (Mixx/Flooz)">
+                    <input id="res-payment-ref" type="text" placeholder="Reference transaction (optionnel)">
+                    <input id="res-payment-ussd" type="text" placeholder="Code USSD utilise (optionnel)">
+                    <p id="res-ussd-hint" class="payment-ussd-hint is-hidden"></p>
+                    <input id="res-amount" type="text" placeholder="Montant total (FCFA)" readonly>
+                    <div class="payment-tags" aria-label="Moyens de paiement disponibles">
+                        <span class="tag mixx">Mixx by Yas</span>
+                        <span class="tag flooz">Flooz</span>
+                        <span class="tag ussd">USSD</span>
+                    </div>
+                </fieldset>
+
+                <label class="mini-consent">
+                    <input id="res-consent" type="checkbox" required>
+                    <span>Je confirme ma reservation.</span>
+                </label>
+
+                <button type="submit">Envoyer la reservation</button>
+                <p id="res-status" class="mini-status"></p>
+            </form>
+        </article>
+    </div>
+</section>
+
+<section id="mentorat" class="support-section">
+    <h2>Mentorat & Coaching</h2>
+    <div class="cards">
+        <article class="card">
+            <h3>Mentorat individuel</h3>
+            <p>Un mentor dedie pour structurer votre vision, votre execution et votre leadership.</p>
+            <button onclick="openRegistrationForm('Mentorat individuel', 'formations', 'mentorat')">Demander un mentor</button>
+        </article>
+        <article class="card">
+            <h3>Cliniques business</h3>
+            <p>Sessions pratiques pour resoudre vos blocages en marketing, operations et vente.</p>
+            <button onclick="openRegistrationForm('Clinique business', 'events', 'mentorat')">Reserver une session</button>
+        </article>
+        <article class="card">
+            <h3>Suivi startup 90 jours</h3>
+            <p>Plan d'actions hebdomadaire avec objectifs mesurables et revue de progression.</p>
+            <button onclick="openRegistrationForm('Suivi startup 90 jours', 'autre', 'mentorat')">Integrer le programme</button>
+        </article>
+    </div>
+</section>
+
+<section id="financement" class="support-section finance">
+    <h2>Financement & Levee de fonds</h2>
+    <div class="cards">
+        <article class="card">
+            <h3>Preparation au financement</h3>
+            <p>Pack investor-ready: business plan, previsionnel, pitch deck et valorisation.</p>
+            <details class="action-details">
+                <summary>Actions correspondantes</summary>
+                <ul>
+                    <li>Audit du business model et ajustement de la proposition de valeur.</li>
+                    <li>Construction du previsionnel financier sur 12-24 mois.</li>
+                    <li>Preparation du pitch deck et simulation de presentation investisseur.</li>
+                </ul>
+            </details>
+            <button onclick="openRegistrationForm('Preparation au financement', 'autre', 'financement')">Commencer</button>
+        </article>
+        <article class="card">
+            <h3>Demo Day investisseurs</h3>
+            <p>Présentation devant banques partenaires, angels et acteurs de l'écosystème.</p>
+            <details class="action-details">
+                <summary>Actions correspondantes</summary>
+                <ul>
+                    <li>Selection des startups pretes a pitcher.</li>
+                    <li>Coaching oratoire et storytelling entrepreneurial.</li>
+                    <li>Mise en relation ciblee avec banques, angels et partenaires financiers.</li>
+                </ul>
+            </details>
+            <button onclick="openRegistrationForm('Participation Demo Day', 'events', 'financement')">Candidater</button>
+        </article>
+        <article class="card">
+            <h3>Accompagnement post-investissement</h3>
+            <p>Gouvernance, pilotage KPI et structuration de croissance apres levee.</p>
+            <details class="action-details">
+                <summary>Actions correspondantes</summary>
+                <ul>
+                    <li>Mise en place de reporting KPI mensuel et trimestriel.</li>
+                    <li>Structuration de la gouvernance et des instances de pilotage.</li>
+                    <li>Plan d'acceleration commerciale et operationnelle post-levee.</li>
+                </ul>
+            </details>
+            <button onclick="openRegistrationForm('Accompagnement post-investissement', 'autre', 'financement')">Demander l'accompagnement</button>
+        </article>
+    </div>
+</section>
+
+<section id="partenaires" class="partners">
+    <h2>Partenaires</h2>
+    <div id="partner-list" class="partner-list" role="tablist" aria-label="Types de partenaires"></div>
+    <div id="partner-details" class="partner-details" aria-live="polite">
+        <h3 id="partner-title"></h3>
+        <ul id="partner-types"></ul>
+        <button id="partner-cta" type="button">Demander ce partenariat</button>
+    </div>
+</section>
+
+<section id="pub-video" class="video-preview">
+    <h2>Pub Video UNIPOD</h2>
+    <p>Decouvre nos videos promotionnelles et temoignages d'entrepreneurs.</p>
+    <a class="video-link-btn" href="/pub-video">Voir les videos</a>
+</section>
+
+<section id="mobile-app" class="mobile-app">
+    <h2>Application Mobile UNIPOD</h2>
+    <p>Un espace réservé pour la version mobile: inscriptions, agenda, mentorat et notifications en temps réel.</p>
+    <div class="mobile-app-grid">
+        <article class="mobile-card">
+            <h3>Bientot sur Android & iOS</h3>
+            <p>Lancement prevu prochainement. Les liens officiels Play Store et App Store seront ajoutes ici.</p>
+            <div class="store-buttons">
+                <a class="store-badge" href="/inscription?domain=mobile&activity=Preinscription%20Android&source=mobile-app" aria-label="Google Play (bientôt disponible)">
+                    <i class="fa-brands fa-google-play"></i>
+                    <span>
+                        <small>Disponible sur</small>
+                        <strong>Google Play</strong>
+                    </span>
+                </a>
+                <a class="store-badge" href="/inscription?domain=mobile&activity=Preinscription%20iOS&source=mobile-app" aria-label="App Store (bientôt disponible)">
+                    <i class="fa-brands fa-apple"></i>
+                    <span>
+                        <small>Télécharger sur</small>
+                        <strong>App Store</strong>
+                    </span>
+                </a>
+            </div>
+        </article>
+        <article class="mobile-card qr-placeholder">
+            <h3>QR Code</h3>
+            <p>Zone réservée pour scanner et télécharger l'application mobile UNIPOD.</p>
+            <div class="qr-box">
+                <img
+                    id="mobile-app-qr"
+                    data-app-port="5050"
+                    alt="QR code de telechargement de l'application mobile UNIPOD"
+                >
+            </div>
+            <a id="mobile-app-link" class="qr-link" href="http://127.0.0.1:5050" target="_blank" rel="noopener noreferrer">
+                Ouvrir l'application web
+            </a>
+            <p id="mobile-app-note" class="qr-note"></p>
+        </article>
+    </div>
+</section>
+
+<section id="faq" class="faq-section">
+    <h2>FAQ & Contact</h2>
+    <div class="faq-grid">
+        <article>
+            <h3>Qui peut s'inscrire ?</h3>
+            <p>Étudiants, jeunes diplômés, entrepreneurs débutants et startups en phase de croissance.</p>
+        </article>
+        <article>
+            <h3>Combien coute l'accompagnement ?</h3>
+            <p>Selon le programme: certains parcours sont subventionnes, d'autres sont premium.</p>
+        </article>
+        <article>
+            <h3>Comment etre contacte rapidement ?</h3>
+            <p>Utilisez le formulaire d'inscription en precisant votre besoin. L'equipe revient sous 48h.</p>
+        </article>
+    </div>
+    <div class="faq-cta">
+        <button onclick="openRegistrationForm('Demande information', 'autre', 'faq')">Contacter UNIPOD</button>
+    </div>
+</section>
+
+<section id="apropos" class="about-section">
+    <h2>À propos</h2>
+    <p>
+        UNIPOD est un hub d'innovation de l'Université de Lomé qui accompagne les entrepreneurs
+        de l'idée au déploiement. Notre mission: transformer les talents en entreprises durables.
+    </p>
+</section>
+
+<section id="contact" class="contact-section">
+    <h2>Contact</h2>
+    <p>Une question sur les programmes ou les partenariats ?</p>
+    <button onclick="openRegistrationForm('Demande de contact', 'autre', 'contact')">Nous contacter</button>
+</section>
+
+<section class="cta-band">
+    <h2>Vous avez un projet ?</h2>
+    <p>Integrez notre prochaine cohorte et beneficiez d'un accompagnement de bout en bout.</p>
+    <button onclick="openRegistrationForm('Demarrage candidature', 'autre', 'cta-band')">Demarrer ma candidature</button>
+</section>
+
+<footer>
+    <p>© 2026 UNIPOD - Lomé | Vidéos d'entrepreneuriat</p>
+    <div class="social-icons">
+        <a href="https://youtube.com/@unipod/videos" target="_blank" rel="noopener noreferrer" aria-label="YouTube videos entrepreneuriat"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@unipod" target="_blank" rel="noopener noreferrer" aria-label="TikTok videos entrepreneuriat"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/unipod/reels/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Reels entrepreneuriat"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/unipod/posts/?feedView=videos" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn videos entrepreneuriat"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>

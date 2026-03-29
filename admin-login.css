@@ -1,0 +1,129 @@
+:root {
+    --bg: #eef3fb;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --primary: #1d4ed8;
+    --primary-dark: #163ea6;
+    --error: #b91c1c;
+    --border: #dbe4ef;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 440px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.1);
+    padding: 24px;
+}
+
+h1 {
+    margin: 0 0 8px;
+}
+
+p {
+    margin-top: 0;
+    color: var(--muted);
+}
+
+form {
+    display: grid;
+    gap: 8px;
+}
+
+label {
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+input {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+button {
+    margin-top: 14px;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 14px;
+    background: var(--primary);
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--primary-dark);
+}
+
+button:disabled {
+    opacity: 0.8;
+    cursor: wait;
+}
+
+.status {
+    margin-top: 10px;
+    min-height: 20px;
+    font-weight: 700;
+}
+
+.status.error {
+    color: var(--error);
+}
+
+.links {
+    margin-top: 6px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.links a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.uni-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 14px 0 0 18px;
+    padding: 7px 12px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: #ffffff;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.uni-badge img {
+    width: 120px;
+    height: 34px;
+    object-fit: contain;
+}
+

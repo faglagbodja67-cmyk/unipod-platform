@@ -1,0 +1,21 @@
+{
+  "name": "unipod-platform",
+  "version": "1.0.0",
+  "description": "UNIPOD platform with a simple backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "unipod",
+    "express",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.0"
+  }
+}

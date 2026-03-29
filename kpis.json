@@ -1,0 +1,46 @@
+{
+  "entrepreneurs": {
+    "key": "entrepreneurs",
+    "title": "Entrepreneurs formés",
+    "value": 250,
+    "prefix": "+",
+    "suffix": "-",
+    "target": 300,
+    "targetSuffix": "-",
+    "unit": "-",
+    "displayValue": "+250-"
+  },
+  "incubation": {
+    "key": "incubation",
+    "title": "Startups incubées",
+    "value": 35,
+    "prefix": "-",
+    "suffix": "-",
+    "target": 50,
+    "targetSuffix": "-",
+    "unit": "-",
+    "displayValue": "-35-"
+  },
+  "femmes": {
+    "key": "femmes",
+    "title": "Taux de participation féminine",
+    "value": 46,
+    "prefix": "-",
+    "suffix": "%",
+    "target": 50,
+    "targetSuffix": "%",
+    "unit": "%",
+    "displayValue": "-46%"
+  },
+  "partenaires": {
+    "key": "partenaires",
+    "title": "Partenaires actifs",
+    "value": 15,
+    "prefix": "-",
+    "suffix": "-",
+    "target": 20,
+    "targetSuffix": "-",
+    "unit": "-",
+    "displayValue": "-15-"
+  }
+}

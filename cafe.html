@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIPOD - Espace Cafe</title>
+    <link rel="stylesheet" href="cafe.css">
+</head>
+<body>
+    <section class="brand-strip">
+        <div class="brand-item university">
+            <img src="logo.png" alt="Logo Université de Lomé">
+            <span>Université de Lomé</span>
+        </div>
+        <div class="brand-item">
+            <img src="Unipod-logo.016fe425.png" alt="Logo UNIPOD">
+            <span>UNIPOD</span>
+        </div>
+        <div class="brand-item pnud">
+            <img src="pnud-logo.svg" alt="Logo PNUD">
+            <span>PNUD</span>
+        </div>
+    </section>
+
+    <header class="topbar">
+        <h1>Espace Café UNIPOD</h1>
+        <nav>
+            <a href="/">Accueil</a>
+            <a href="#menu-cafe">Voir le menu</a>
+            <a href="#reservation-cafe">Réserver une place</a>
+            <a href="#rejoindre-cafe">Rejoindre maintenant</a>
+        </nav>
+    </header>
+
+    <main class="layout">
+        <section class="hero">
+            <h2>Un espace convivial pour apprendre, réseauter et collaborer</h2>
+            <p>Consultez les menus, réservez votre place et rejoignez la communauté Espace Café.</p>
+        </section>
+
+        <section id="menu-cafe" class="block">
+            <h3>Voir le menu</h3>
+            <div id="cafe-menu-grid" class="menu-grid">
+                <article><strong>Lundi</strong><span>Pinon au poisson / Riz curie + viande de boeuf</span></article>
+                <article><strong>Mardi</strong><span>Riz banc + sauce de mouton / Patte de mais + Gboma</span></article>
+                <article><strong>Mercredi</strong><span>Petit poids a la viande + saucisse / Couscous au gras + poulets</span></article>
+                <article><strong>Jeudi</strong><span>Frites au poulet / Spaghetti a la boulette de viande</span></article>
+                <article><strong>Vendredi</strong><span>Riz au gras + poulet braise / Pate rouge + poisson</span></article>
+            </div>
+        </section>
+
+        <section id="reservation-cafe" class="block">
+            <h3>Réserver une place</h3>
+            <form id="reservation-form" class="mini-form" novalidate>
+                <input id="res-fullname" type="text" placeholder="Nom complet" required>
+                <input id="res-email" type="email" placeholder="Email" required>
+                <input id="res-phone" type="tel" placeholder="Téléphone">
+                <input id="res-date" type="date" required>
+                <input id="res-time" type="time" required>
+                <input id="res-places" type="number" min="1" max="20" value="1" required>
+                <textarea id="res-note" rows="3" placeholder="Précisions (optionnel)"></textarea>
+                <label class="mini-consent">
+                    <input id="res-consent" type="checkbox" required>
+                    <span>Je confirme ma réservation.</span>
+                </label>
+                <button type="submit">Envoyer la réservation</button>
+                <p id="res-status" class="mini-status"></p>
+            </form>
+        </section>
+
+        <section id="rejoindre-cafe" class="block">
+            <h3>Rejoindre maintenant</h3>
+            <form id="join-form" class="mini-form" novalidate>
+                <input id="join-fullname" type="text" placeholder="Nom complet" required>
+                <input id="join-email" type="email" placeholder="Email" required>
+                <input id="join-phone" type="tel" placeholder="Téléphone">
+                <select id="join-interest" required>
+                    <option value="">Intérêt principal</option>
+                    <option value="Networking">Networking</option>
+                    <option value="Coworking">Coworking</option>
+                    <option value="Mini Talks">Mini Talks</option>
+                    <option value="Pitch Libre">Pitch Libre</option>
+                </select>
+                <textarea id="join-note" rows="3" placeholder="Votre objectif (optionnel)"></textarea>
+                <label class="mini-consent">
+                    <input id="join-consent" type="checkbox" required>
+                    <span>Je souhaite rejoindre la communauté Espace Café.</span>
+                </label>
+                <button type="submit">Rejoindre</button>
+                <p id="join-status" class="mini-status"></p>
+            </form>
+        </section>
+    </main>
+
+    <script src="cafe.js"></script>
+</body>
+</html>

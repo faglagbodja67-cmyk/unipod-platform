@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIPOD - Gestion des Menus</title>
+    <link rel="stylesheet" href="admin.css">
+    <style>
+        .brand-head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 10px;
+        }
+
+        .brand-head img {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+        }
+
+        .admin-section {
+            background: #ffffff;
+            border: 1px solid #d7e1ee;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 16px;
+        }
+
+        .menu-form {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+
+        .menu-form input,
+        .menu-form select,
+        .menu-form button {
+            border: 1px solid #d7e1ee;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font: inherit;
+        }
+
+        .menu-form button,
+        .btn-danger {
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .menu-form button {
+            background: #1d4ed8;
+            color: #fff;
+        }
+
+        .menu-day {
+            border-top: 1px solid #e5edf7;
+            padding-top: 14px;
+            margin-top: 14px;
+        }
+
+        .menu-item-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eef3fb;
+        }
+
+        .btn-danger {
+            background: #b91c1c;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+        }
+
+        .admin-status {
+            min-height: 20px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <section class="uni-badge">
+        <img src="logo.png" alt="Logo Universite de Lome">
+        <span>Universite de Lome</span>
+    </section>
+    <main class="admin-page">
+        <header class="admin-header">
+            <div class="brand-head">
+                <img src="Unipod-logo.016fe425.png" alt="Logo UNIPOD">
+                <div>
+                    <h1>Gestion des Menus</h1>
+                    <p>Ajoutez ou supprimez les plats du menu hebdomadaire de l'Espace Cafe.</p>
+                </div>
+            </div>
+            <div class="admin-links">
+                <a href="/">Accueil</a>
+                <a href="/admin">Tableau de bord</a>
+                <button id="logout-btn" type="button">Deconnexion</button>
+            </div>
+        </header>
+
+        <section class="admin-section">
+            <h2>Ajouter un plat</h2>
+            <form id="menu-form" class="menu-form">
+                <select id="menu-day" required>
+                    <option value="">Jour</option>
+                    <option value="Lundi">Lundi</option>
+                    <option value="Mardi">Mardi</option>
+                    <option value="Mercredi">Mercredi</option>
+                    <option value="Jeudi">Jeudi</option>
+                    <option value="Vendredi">Vendredi</option>
+                </select>
+                <input id="menu-name" type="text" placeholder="Nom du plat" required>
+                <input id="menu-price" type="number" min="1" placeholder="Prix FCFA" required>
+                <input id="menu-image" type="url" placeholder="URL image (optionnel)">
+                <button type="submit">Ajouter</button>
+            </form>
+            <p id="menu-status" class="admin-status"></p>
+        </section>
+
+        <section class="admin-section">
+            <h2>Menus existants</h2>
+            <div id="menus-container"></div>
+        </section>
+    </main>
+
+    <script src="admin-menus.js"></script>
+</body>
+</html>

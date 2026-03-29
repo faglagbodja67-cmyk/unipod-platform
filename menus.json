@@ -1,0 +1,87 @@
+[
+  {
+    "day": "Lundi",
+    "items": [
+      {
+        "name": "Pinon au poisson",
+        "price": 1500,
+        "currency": "FCFA",
+        "imageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        "name": "Riz curie + viande de boeuf",
+        "price": 2000,
+        "currency": "FCFA",
+        "imageUrl": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=500&q=80"
+      }
+    ]
+  },
+  {
+    "day": "Mardi",
+    "items": [
+      {
+        "name": "Riz banc + sauce de mouton",
+        "price": 2500,
+        "currency": "FCFA",
+        "imageUrl": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        "name": "Patte de mais + Gboma",
+        "price": 1500,
+        "currency": "FCFA",
+        "imageUrl": "https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=500&q=80"
+      }
+    ]
+  },
+  {
+    "day": "Mercredi",
+    "items": [
+      {
+        "name": "Petit poids a la viande + saucisse",
+        "price": 2000,
+        "currency": "FCFA",
+        "imageUrl": "https://images.unsplash.com/photo-1517244683847-7456b63c5969?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        "name": "Couscous au gras + poulets",
+        "price": 2500,
+        "currency": "FCFA",
+        "imageUrl": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=500&q=80"
+      }
+    ]
+  },
+  {
+    "day": "Jeudi",
+    "items": [
+      {
+        "name": "Frites au poulet",
+        "price": 2000,
+        "currency": "FCFA",
+        "imageUrl": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        "name": "Spaghetti a la boulette de viande",
+        "price": 2500,
+        "currency": "FCFA",
+        "imageUrl": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=500&q=80"
+      }
+    ]
+  },
+  {
+    "day": "Vendredi",
+    "items": [
+      {
+        "name": "Riz au gras + poulet braise",
+        "price": 2500,
+        "currency": "FCFA",
+        "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        "name": "Pate rouge + poisson",
+        "price": 2000,
+        "currency": "FCFA",
+        "imageUrl": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=500&q=80"
+      }
+    ]
+  }
+]

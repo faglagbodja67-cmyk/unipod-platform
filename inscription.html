@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIPOD - Formulaire d'inscription</title>
+    <link rel="stylesheet" href="inscription.css">
+</head>
+<body>
+    <section class="uni-badge">
+        <img src="logo.png" alt="Logo Université de Lomé">
+        <span>Université de Lomé</span>
+    </section>
+    <main class="form-page">
+        <section class="form-card">
+            <div class="form-head">
+                <p class="kicker">UNIPOD - Inscription officielle</p>
+                <h1>Rejoindre un programme UNIPOD</h1>
+                <p>
+                    Complétez ce formulaire professionnel. Chaque demande est classée automatiquement
+                    dans le tableau admin selon le domaine d'activité choisi.
+                </p>
+            </div>
+
+            <form id="registration-form" novalidate>
+                <fieldset>
+                    <legend>Identité</legend>
+                    <div class="grid two-cols">
+                        <div class="field">
+                            <label for="fullName">Nom complet <span>*</span></label>
+                            <input id="fullName" name="fullName" type="text" autocomplete="name" required>
+                            <small class="error" id="fullName-error"></small>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email professionnel <span>*</span></label>
+                            <input id="email" name="email" type="email" autocomplete="email" required>
+                            <small class="error" id="email-error"></small>
+                        </div>
+                        <div class="field">
+                            <label for="phone">Téléphone</label>
+                            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+228 90 00 00 00">
+                            <small class="error" id="phone-error"></small>
+                        </div>
+                        <div class="field">
+                            <label for="organization">Organisation / Startup</label>
+                            <input id="organization" name="organization" type="text" autocomplete="organization">
+                            <small class="error" id="organization-error"></small>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Demande</legend>
+                    <div class="grid two-cols">
+                        <div class="field">
+                            <label for="domain">Domaine d'activité <span>*</span></label>
+                            <select id="domain" name="domain" required>
+                                <option value="formations">Formations</option>
+                                <option value="events">Événements</option>
+                                <option value="network">Réseautage</option>
+                                <option value="videos">Pub Video</option>
+                                <option value="mobile">Application Mobile</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                            <small class="error" id="domain-error"></small>
+                        </div>
+                        <div class="field">
+                            <label for="activityTitle">Activité / Programme</label>
+                            <input id="activityTitle" name="activityTitle" type="text">
+                            <small class="error" id="activityTitle-error"></small>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Message <span>*</span></label>
+                        <textarea id="message" name="message" rows="5" maxlength="600" placeholder="Expliquez votre besoin, vos objectifs ou votre projet..." required></textarea>
+                        <div class="meta-line">
+                            <small class="error" id="message-error"></small>
+                            <small id="message-count">0 / 600</small>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Validation</legend>
+                    <label class="consent-line" for="consent">
+                        <input id="consent" name="consent" type="checkbox" required>
+                        <span>J'accepte le traitement de mes données pour ma candidature UNIPOD. <strong>*</strong></span>
+                    </label>
+                    <small class="error" id="consent-error"></small>
+                </fieldset>
+
+                <input id="sourcePage" name="sourcePage" type="hidden">
+
+                <div class="actions">
+                    <button id="submit-btn" type="submit">Envoyer l'inscription</button>
+                    <a class="link-btn" href="/">Retour accueil</a>
+                    <a class="link-btn" href="/admin-login">Connexion admin</a>
+                </div>
+            </form>
+
+            <p id="form-status" class="status" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="inscription.js"></script>
+</body>
+</html>
+
+

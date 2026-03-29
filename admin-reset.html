@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIPOD - Reinitialisation Admin</title>
+    <link rel="stylesheet" href="admin-login.css">
+</head>
+<body>
+    <section class="uni-badge">
+        <img src="logo.png" alt="Logo Université de Lomé">
+        <span>Université de Lomé</span>
+    </section>
+    <main class="login-page">
+        <section class="login-card">
+            <h1>Reinitialiser le mot de passe admin</h1>
+            <p>Etape 1: demandez un code. Etape 2: entrez le code et votre nouveau mot de passe.</p>
+
+            <form id="request-form" novalidate>
+                <label for="request-email">Email admin</label>
+                <input id="request-email" type="email" required>
+                <button id="request-btn" type="submit">Generer un code</button>
+            </form>
+
+            <form id="confirm-form" novalidate>
+                <label for="confirm-email">Email admin</label>
+                <input id="confirm-email" type="email" required>
+
+                <label for="reset-code">Code de reinitialisation</label>
+                <input id="reset-code" type="text" required>
+
+                <label for="new-password">Nouveau mot de passe</label>
+                <input id="new-password" type="password" minlength="8" required>
+
+                <button id="confirm-btn" type="submit">Valider la reinitialisation</button>
+            </form>
+
+            <p id="reset-status" class="status"></p>
+            <div class="links">
+                <a href="/admin-login">Retour connexion admin</a>
+                <a href="/">Retour accueil</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="admin-reset.js"></script>
+</body>
+</html>
+

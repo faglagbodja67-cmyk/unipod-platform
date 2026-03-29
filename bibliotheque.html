@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIPOD - Bibliothèque Entrepreneuriat</title>
+    <link rel="stylesheet" href="bibliotheque.css">
+</head>
+<body>
+    <section class="uni-badge">
+        <img src="logo.png" alt="Logo Université de Lomé">
+        <span>Université de Lomé</span>
+    </section>
+    <header class="topbar">
+        <h1>Bibliothèque Entrepreneuriat UNIPOD</h1>
+        <nav>
+            <a href="/">Accueil</a>
+            <a href="/pub-video.html">Vidéos</a>
+            <a href="/inscription?domain=autre&source=bibliotheque">Inscription</a>
+            <a href="/admin-login">Admin</a>
+        </nav>
+    </header>
+
+    <main class="layout">
+        <section class="hero">
+            <h2>5000 Livres + Vidéos entrepreneuriat</h2>
+            <p>Catalogue dynamique des ressources entrepreneuriat avec recherche instantanée.</p>
+        </section>
+
+        <section class="search-box">
+            <input id="search-input" type="search" placeholder="Rechercher par titre, auteur, thème...">
+            <select id="theme-filter">
+                <option value="">Tous les thèmes</option>
+            </select>
+            <select id="level-filter">
+                <option value="">Tous les niveaux</option>
+            </select>
+            <select id="sort-select">
+                <option value="title_asc">Titre A-Z</option>
+                <option value="title_desc">Titre Z-A</option>
+                <option value="year_desc">Année récente</option>
+                <option value="year_asc">Année ancienne</option>
+            </select>
+            <button id="search-btn" type="button">Rechercher</button>
+            <button id="export-btn" type="button">Exporter CSV</button>
+        </section>
+
+        <section>
+            <h3>Vidéos entrepreneuriat</h3>
+            <div id="video-list" class="video-grid"></div>
+        </section>
+
+        <section>
+            <div class="books-head">
+                <h3>Livres d'entrepreneuriat</h3>
+                <p id="books-meta"></p>
+            </div>
+            <div id="books-list" class="books-grid"></div>
+            <div class="pager">
+                <button id="prev-btn" type="button">Précédent</button>
+                <span id="page-info">Page 1</span>
+                <button id="next-btn" type="button">Suivant</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="bibliotheque.js"></script>
+</body>
+</html>
+

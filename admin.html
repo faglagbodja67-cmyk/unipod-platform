@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIPOD - Tableau Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <section class="uni-badge">
+        <img src="logo.png" alt="Logo Université de Lomé">
+        <span>Université de Lomé</span>
+    </section>
+    <main class="admin-page">
+        <header class="admin-header">
+            <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+                <img src="Unipod-logo.016fe425.png" alt="Logo UNIPOD" style="width:56px; height:56px; object-fit:contain;">
+                <div>
+                    <h1>Tableau Admin UNIPOD</h1>
+                    <p>Inscriptions en temps réel, classées par domaine d'activité.</p>
+                </div>
+            </div>
+            <div class="admin-links">
+                <a href="/">Accueil</a>
+                <a href="/inscription?domain=autre&source=admin">Nouveau formulaire</a>
+                <a href="/admin-menus">Gestion des menus</a>
+                <button id="logout-btn" type="button">Deconnexion</button>
+            </div>
+        </header>
+
+        <section id="kpi-admin" class="kpi-admin">
+            <div class="kpi-admin-head">
+                <div>
+                    <h2>Gestion des KPI</h2>
+                    <p>Modifiez les indicateurs affichés sur la page d'accueil.</p>
+                </div>
+                <button id="save-kpis-btn" type="button">Enregistrer les KPI</button>
+            </div>
+            <div id="kpi-admin-grid" class="kpi-admin-grid"></div>
+            <p id="kpi-admin-status" class="kpi-admin-status" role="status" aria-live="polite"></p>
+        </section>
+
+        <section id="summary" class="summary"></section>
+        <section id="domain-tabs" class="domain-tabs" aria-label="Filtrer les inscriptions par domaine"></section>
+        <section id="admin-view" class="admin-view"></section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>
+
